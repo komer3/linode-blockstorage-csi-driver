@@ -88,6 +88,7 @@ func loadConfig() configuration {
 
 func main() {
 	// Create a base context with the logger
+	// test gha
 	ctx := context.Background()
 	log := logger.NewLogger(ctx)
 	ctx = context.WithValue(ctx, logger.LoggerKey{}, log)
