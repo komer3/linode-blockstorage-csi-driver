@@ -50,14 +50,14 @@ jobs:
           version: latest
       - run: make build
       - run: go test -cover ./... -coverprofile ./coverage.out
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          files: ./coverage.out
-          fail_ci_if_error: true
-          verbose: true
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: linode/linode-blockstorage-csi-driver
+      # - name: Upload coverage reports to Codecov
+      #   uses: codecov/codecov-action@v5
+      #   with:
+      #     files: ./coverage.out
+      #     fail_ci_if_error: true
+      #     verbose: true
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     slug: linode/linode-blockstorage-csi-driver
   e2e-tests:
     runs-on: ubuntu-latest
     needs: changes
